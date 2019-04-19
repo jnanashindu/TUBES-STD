@@ -9,28 +9,35 @@ using namespace std;
 #define info(P) P->info
 #define child(P) P->child
 
-typedef string infotype_childtahanan;
-typedef struct elmlist_childtahanan *address_childtahanan;
+typedef struct elmlist_childTahanan *address_childtahanan;
 
-struct elmlist_childtahanan{
-    infotype_childtahanan info;
+struct infotype_childTahanan{
+    int id;
+    int masatahanan;
+    int nomersel;
+    string namakasus;
+    string jeniskasus;
+};
+
+struct childTahanan{
+    infotype_childTahanan info;
     address_childtahanan next;
 };
 
-struct List_child{
+struct listchildTahanan{
     address_childtahanan first;
 };
 
-void createList(List_child &L);
-address_child alokasi(infotype_child x);
-void dealokasi(address_child &P);
-address_child findElm(List_child L, infotype_child x);
-void printInfo(List_child L);
-void insertFirst(List_child &L, address_child P);
-void insertLast(List_child &L, address_child P);
-void insertAfter(address_child Prec, address_child P);
-void deleteFirst(List_child &L, address_child &P);
-void deleteLast(List_child &L, address_child &P);
-void deleteAfter(address_child Prec, address_child &P);
+void createList(listchildTahanan &L);
+address_childtahanan alokasi(int id,string kasus,int masa,string namakasus, int nomersel);
+void dealokasi(address_childtahanan &P);
+address_childtahanan findElm(listchildTahanan L, infotype_childTahanan x);
+void printInfo(listchildTahanan L);
+void insertFirst(listchildTahanan &L, address_childtahanan P);
+void insertLast(listchildTahanan &L, address_childtahanan P);
+void insertAfter(address_childtahanan Prec, address_childtahanan P);
+void deleteFirst(listchildTahanan &L, address_childtahanan &P);
+void deleteLast(listchildTahanan &L, address_childtahanan &P);
+void deleteAfter(address_childtahanan Prec, address_childtahanan &P);
 
 #endif // LISTCHILD_H_INCLUDED

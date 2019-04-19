@@ -9,28 +9,31 @@ using namespace std;
 #define first(L) L.first
 #define next(P) P->next
 #define info(P) P->info
-#define child(P) P->child
-
 
 typedef struct Tahanan *address_tahanan;
 
 struct infotype_tahanan {
-    string nametahanan, asaltahanan;
-    id int;
+    string nametahanan;
+    string asaltahanan;
+    int id;
+    int umur;
+    int NIK;
+    string jeniskelamin;
 };
 
 struct Tahanan {
     infotype_tahanan info;
     address_tahanan next;
-    List_Relasi child;
+    address_tahanan prev;
 };
 
 struct listTahanan{
     address_tahanan first;
+    address_tahanan last;
 };
 
 void createList(listTahanan &L);
-address_tahanan alokasi(infotype_tahanan.asaltahanan asal, infotype_tahanan.id idtahanan, infotype_tahanan.nametahanan nama);
+address_tahanan alokasi(string asal,int idtahanan,string nama, string kelamin, int umur, int NIK);
 void insertFirst(listTahanan &L, address_tahanan P);
 void insertAfter(listTahanan &L, address_tahanan Prec, address_tahanan P);
 void insertLast(listTahanan &L, address_tahanan P);
@@ -38,7 +41,7 @@ void deleteFirst(listTahanan &L, address_tahanan &P);
 void deleteLast(listTahanan &L, address_tahanan &P);
 void deleteAfter(listTahanan &L, address_tahanan Prec, address_tahanan &P);
 void dealokasi(address_tahanan &P);
-address_tahanan findElm(listTahanan L, infotype_tahanan.id X);
+address_tahanan findElm(listTahanan L, int X);
 void printInfo(listTahanan L);
 
 #endif // LISTPARENT_H_INCLUDED
