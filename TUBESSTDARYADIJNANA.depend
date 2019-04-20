@@ -6,3 +6,16 @@
 1514140574 source:e:\kuliah\semester 2\tubes std\tubes-std\main.cpp
 	<iostream>
 
+1555729799 source:d:\jnana\std\tubes\tubes-std\listchild.cpp
+
+1555729799 source:d:\jnana\std\tubes\tubes-std\listrelation.cpp
+
+1555729799 source:d:\jnana\std\tubes\tubes-std\main.cpp
+	<iostream>
+
+1555730588 source:d:\jnana\std\tubes\tubes-std\listparent.cpp
+	"listparent.h"
+
+1555730726 d:\jnana\std\tubes\tubes-std\listparent.h
+	<iostream>
+

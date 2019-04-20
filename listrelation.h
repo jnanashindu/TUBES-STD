@@ -14,9 +14,9 @@ using namespace std;
 #define child(P) P->child
 #define parent(P) P->parent
 
-typedef struct Relasi *addressRelasi;
+typedef struct elmlist_Relasi *addressRelasi;
 
-struct Relasi{
+struct elmlist_Relasi{
     addressRelasi next;
     addressRelasi prev;
     address_tahanan parent;

@@ -1,12 +1,14 @@
 #ifndef LISTPARENT_H_INCLUDED
 #define LISTPARENT_H_INCLUDED
 
-#include "listrelation.h"
+//#include "listrelation.h"
 
 #include <iostream>
 using namespace std;
 
 #define first(L) L.first
+#define last(L) L.last
+#define prev(P) P->prev
 #define next(P) P->next
 #define info(P) P->info
 
